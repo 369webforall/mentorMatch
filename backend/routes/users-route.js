@@ -11,10 +11,14 @@ const {
   getUsers,
   getUserById,
   addUser,
+  updateUser,
+  deleteUser,
 } = require("../controllers/user-controller");
 
 router.get("/", getUsers); // http://localhost:8080/api/users
 router.post("/", addUser); // http://localhost:8080/api/users
 router.get("/:id", getUserById); // http://localhost:8080/api/users/1
+router.put("/:id", updateUser); // http://localhost:8080/api/users/1
+router.delete("/:id", deleteUser); // http://localhost:8080/api/users/1
 
 module.exports = router;
